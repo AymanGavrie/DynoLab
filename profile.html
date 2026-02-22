@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile - DynoLab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#dcdcdc;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#e5e5e5;
+border-bottom:1px solid #ccc;
+}
+
+.logo img{
+height:90px;
+}
+
+.menu{
+display:flex;
+gap:50px;
+}
+
+.menu a{
+text-decoration:none;
+color:#c5161d;
+font-weight:600;
+font-size:18px;
+position:relative;
+transition:0.3s;
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0%;
+height:3px;
+background:#c5161d;
+border-radius:10px;
+transition:0.3s;
+}
+
+.menu a:hover::after,
+.menu .active::after{
+width:100%;
+}
+
+/* ================= PROFILE SECTION ================= */
+
+.profile-container{
+padding:80px;
+display:flex;
+justify-content:center;
+}
+
+.profile-card{
+background:#f2f2f2;
+width:100%;
+max-width:900px;
+border-radius:25px;
+padding:40px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+transition:0.3s ease;
+}
+
+.profile-card:hover{
+transform:translateY(-5px);
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+.profile-header{
+display:flex;
+align-items:center;
+gap:30px;
+margin-bottom:40px;
+}
+
+.profile-header img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #c5161d;
+}
+
+.profile-info h2{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.profile-info p{
+color:#555;
+}
+
+.edit-btn{
+margin-top:15px;
+padding:10px 25px;
+border:none;
+background:#c5161d;
+color:white;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.edit-btn:hover{
+background:#a50f15;
+transform:scale(1.05);
+}
+
+/* ================= STATS ================= */
+
+.profile-stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-bottom:40px;
+}
+
+.stat-box{
+background:#e6e6e6;
+padding:25px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.stat-box:hover{
+background:#d9d9d9;
+transform:translateY(-5px);
+}
+
+.stat-box h3{
+color:#c5161d;
+font-size:24px;
+}
+
+.stat-box p{
+color:#555;
+}
+
+/* ================= ORDER HISTORY ================= */
+
+.order-section h3{
+margin-bottom:20px;
+}
+
+.order-item{
+background:#e6e6e6;
+padding:20px;
+border-radius:15px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.order-item span{
+color:#555;
+}
+
+.logout-btn{
+margin-top:30px;
+background:#111;
+color:white;
+padding:12px 30px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.logout-btn:hover{
+background:#333;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
+
+.menu{
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.profile-container{
+padding:40px 20px;
+}
+
+.profile-header{
+flex-direction:column;
+text-align:center;
+}
+
+.profile-stats{
+grid-template-columns:1fr;
+}
+
+.order-item{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="explore.html">Explore</a>
+<a href="garage.html">Garage</a>
+<a href="profile.html" class="active">Profile</a>
+<a href="cart.html">Carts</a>
+</div>
+</nav>
+
+<!-- PROFILE -->
+<section class="profile-container">
+
+<div class="profile-card">
+
+<div class="profile-header">
+<img src="pp.jpeg">
+<div class="profile-info">
+<h2>Lorem Ipsum</h2>
+<p>loremipsum@gmail.com</p>
+<button class="edit-btn">Edit Profile</button>
+</div>
+</div>
+
+<div class="profile-stats">
+<div class="stat-box">
+<h3>6</h3>
+<p>Cars Built</p>
+</div>
+
+<div class="stat-box">
+<h3>12</h3>
+<p>Orders</p>
+</div>
+
+<div class="stat-box">
+<h3>$8,540</h3>
+<p>Total Spent</p>
+</div>
+</div>
+
+<div class="order-section">
+<h3>Recent Orders</h3>
+
+<div class="order-item">
+<span>Turbo Kit</span>
+<span>$2599</span>
+</div>
+
+<div class="order-item">
+<span>ECU Tune</span>
+<span>$899</span>
+</div>
+
+<div class="order-item">
+<span>Exhaust System</span>
+<span>$356</span>
+</div>
+
+<button class="logout-btn">Logout</button>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Explore - DynoLab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#dcdcdc;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#e5e5e5;
+border-bottom:1px solid #ccc;
+}
+
+.logo img{
+height:90px;
+}
+
+.menu{
+display:flex;
+gap:50px;
+}
+
+.menu a{
+text-decoration:none;
+color:#c5161d;
+font-weight:600;
+font-size:18px;
+position:relative;
+transition:0.3s;
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0%;
+height:3px;
+background:#c5161d;
+border-radius:10px;
+transition:0.3s;
+}
+
+.menu a:hover::after,
+.menu .active::after{
+width:100%;
+}
+
+/* ================= CONTENT ================= */
+
+.container{
+padding:70px 80px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+background:#f2f2f2;
+border-radius:22px;
+padding:25px;
+transition:all 0.3s ease;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+.image-box{
+background:#e6e6e6;
+border-radius:18px;
+padding:40px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.image-box img{
+height:120px;
+transition:0.4s ease;
+}
+
+.card:hover .image-box img{
+transform:scale(1.15);
+}
+
+/* CONTENT */
+.card-content{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.card-content p{
+color:#555;
+font-size:14px;
+}
+
+/* BOTTOM ROW */
+.card-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:10px;
+}
+
+.price{
+color:#c5161d;
+font-weight:bold;
+font-size:18px;
+}
+
+button{
+background:#c5161d;
+color:white;
+border:none;
+padding:8px 18px;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#a50f15;
+transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1024px){
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
+
+.menu{
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.container{
+padding:40px 20px;
+}
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="explore.html" class="active">Explore</a>
+<a href="garage.html">Garage</a>
+<a href="profile.html">Profile</a>
+<a href="cart.html">Carts</a>
+</div>
+</nav>
+
+<!-- PRODUCTS -->
+<section class="container">
+<div class="product-grid">
+
+<div class="card">
+<div class="image-box">
+<img src="turbo.png">
+</div>
+<div class="card-content">
+<h3>Turbo Kit</h3>
+<p>High performance turbocharger kit</p>
+<div class="card-bottom">
+<span class="price">$2599</span>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image-box">
+<img src="turbo.png">
+</div>
+<div class="card-content">
+<h3>ECU Tune</h3>
+<p>Professional ECU remap</p>
+<div class="card-bottom">
+<span class="price">$899</span>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image-box">
+<img src="turbo.png">
+</div>
+<div class="card-content">
+<h3>Exhaust System</h3>
+<p>Aggressive performance exhaust</p>
+<div class="card-bottom">
+<span class="price">$356</span>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image-box">
+<img src="turbo.png">
+</div>
+<div class="card-content">
+<h3>Turbo Kit</h3>
+<p>High performance turbocharger kit</p>
+<div class="card-bottom">
+<span class="price">$2599</span>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image-box">
+<img src="turbo.png">
+</div>
+<div class="card-content">
+<h3>ECU Tune</h3>
+<p>Professional ECU remap</p>
+<div class="card-bottom">
+<span class="price">$899</span>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image-box">
+<img src="turbo.png">
+</div>
+<div class="card-content">
+<h3>Exhaust System</h3>
+<p>Aggressive performance exhaust</p>
+<div class="card-bottom">
+<span class="price">$356</span>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+</body>
+</html>

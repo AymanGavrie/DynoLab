@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart - DynoLab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#dcdcdc;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#e5e5e5;
+border-bottom:1px solid #ccc;
+}
+
+.logo img{
+height:90px;
+}
+
+.menu{
+display:flex;
+gap:50px;
+}
+
+.menu a{
+text-decoration:none;
+color:#c5161d;
+font-weight:600;
+font-size:18px;
+position:relative;
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0%;
+height:3px;
+background:#c5161d;
+transition:0.3s;
+}
+
+.menu a:hover::after,
+.menu .active::after{
+width:100%;
+}
+
+/* CONTENT */
+.content{
+padding:80px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<div class="menu">
+<a href="index.html">Home</a> 
+<a href="explore.html">Explore</a>
+<a href="garage.html">Garage</a>
+<a href="profile.html">Profile</a>
+<a href="cart.html" class="active">Carts</a>
+</div>
+</nav>
+
+<div class="content">
+<h1>Welcome to DynoLab</h1>
+<p>Your Performance Upgrade Platform</p>
+</div>
+
+</body>
+</html>
